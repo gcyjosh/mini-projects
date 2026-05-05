@@ -16,9 +16,15 @@ def anagram_checker():
     for char in second_word:
         if char not in count:
             return False 
-        count[char] -= 1 #{'l':0, 'i':0, 's':0, 't':0, 'e':0, 'n':0}
+        else:    
+            count[char] -= 1 #{'l':0, 'i':0, 's':0, 't':0, 'e':0, 'n':0}
     
     for value in count.values():
         if value != 0:
             return False
+        else:
+            return True
+
+print(anagram_checker())
+
         
